@@ -8,4 +8,8 @@ export let tribonacci = ( [a,b,c]:[number,number,number],n : number) : number[]=
     return initArray
 }
 
+export const best_tribonacci = ([a, b, c]: [number, number, number], n: number): number[] => n < 1 ? [] : [a].concat(tribonacci([b, c, a + b + c], n - 1));
+
+
 console.log(tribonacci([1, 1, 1], 10))
+console.log(best_tribonacci([1, 1, 1], 10))
